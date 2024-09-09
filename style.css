@@ -1,4 +1,57 @@
-nav ul{
+header {
+    background-image: url("images/florence.jpg");
+}
+
+nav {
+    li{
+        display: inline-flex;
+        color: purple;
+        gap: 30px;
+    }
+
+    a {
+        color: purple;
+        font-size: 20px;
+        text-decoration: inherit;
+    }
+
+    a:hover {
+        color:white;
+    }
+}
+
+#Intro-Text {
+    color: white;
+    font-size: 40px;
+
+    a {
+        text-decoration: inherit;
+        font-size: 20px;
+        background-color: purple;
+        color: white;
+    }
+}
+
+main {
     display: flex;
-    justify-content: start;
+    border: 10px solid transparent;
+    background-color: lightgray;
+
+    .Photo {
+        border-right: 5px solid transparent;
+        border-bottom: 15px solid white;
+        background-color: white;
+
+    }
+
+    section {
+    }
+    
+    img {
+    }
+
+    #Nova-Scotia {
+        
+        background-color: white;
+    }
 }
