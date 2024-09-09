@@ -3,14 +3,23 @@ header {
 }
 
 nav {
-    li{
-        display: inline-flex;
+    display: flex;
+
+    ul li{
+        display: flex;
         color: purple;
-        gap: 30px;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    ul::before {
+        content: url("images/logo.png");
     }
 
     a {
+        display: block;
         color: purple;
+        list-style: none;
         font-size: 20px;
         text-decoration: inherit;
     }
