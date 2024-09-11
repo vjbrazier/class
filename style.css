@@ -36,7 +36,7 @@ nav {
             list-style: none;
             
             a:hover {
-                color:white;
+                color:blueviolet;
             }
 
             a {
@@ -64,23 +64,45 @@ nav {
         background-color: indigo;
         color: white;
     }
+
+    a:hover {
+        background-color: blueviolet;
+    }
 }
 
 main {
     display: flex;
     border: 15px solid transparent;
 
+   
     div {
         padding-left: 2.55%;
     }
 
     .likes::before {
-        content: url("images/heart.png");
-        
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url("images/heart.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-right: 5px;
+    }
+
+    .likes {
+        padding-right: 10px;
     }
 
     .comments::before {
-        content: url("images/comment.png");
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url("images/comment.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-right: 5px;
     }
 
     .Photo {
