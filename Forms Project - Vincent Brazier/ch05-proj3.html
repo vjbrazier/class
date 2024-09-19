@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="ch05-proj3.css" />
+</head>
+<body>
+<header>
+     <h1>Share Your Travels</h1>
+     <p>let us know where you've been</p>
+</header>
+<main>
+   <section>
+      <fieldset>
+         <legend>Photo Details</legend>
+      </fieldset>
+      <form class="Naming">
+         <label for="photo-title">Title<br></label>
+         <input type="Text" id="photo-title" placeholder="Give your photo a descriptive name">
+         <br>
+         <label for="photo-description">Description<br></label>
+         <textarea id="photo-description" placeholder="Adding a rich description will help with search results"></textarea>
+      </form> 
+
+      <section class="Details">
+         <form class="Location">
+            <label for="continent">Continent<br></label>
+            <input list="continent"> 
+            <datalist id="continent">
+               <option value="North America 1"></option>
+               <option value="North America 2"></option>
+               <option value="North America 3"></option>
+            </datalist>
+            <br>
+
+            <label for="country">Country<br></label>
+            <input list="country">
+            <datalist id="country">
+               <option value="USA 1"></option>
+               <option value="USA 2"></option>
+               <option value="USA 3"></option>
+            </datalist>
+            <br>
+
+            <label for="city">City<br></label>
+            <input list="city">
+            <datalist id="city">
+               <option value="Saginaw 1"></option>
+               <option value="Saginaw 2"></option>
+               <option value="Saginaw 3"></option>
+            </datalist>
+            <br>
+         </form>
+
+         <form class="Licensing">
+            <section class="Copyright">
+               <label for="copyright">Copyright?<br></label>
+               <input type="radio" id="copyright1" name="copyright" value="All rights reserved">
+                  <label for="copyright1">All rights reserved<br></label>
+
+               <input type="radio" id="copyright2" name="copyright" value="Creative Commons">
+                  <label for="copright2">Creative Commons<br></label>
+               <br>
+            </section>
+            
+            <section class="Creative-Commons">
+               <label for="creative_types">Creative Commons Types<br></label>
+               <input type="checkbox" id="creative_types1" name="creative_types" value="Attribution">
+                  <label for="creative_types1">Attribution<br></label>
+
+               <input type="checkbox" id="creative_types2" name="creative_types" value="Noncommercial">
+                  <label for="creative_types2">Noncommercial<br></label>
+
+               <input type="checkbox" id="creative_types3" name="creative_types" value="No derivative works">
+                  <label for="creative_types3">No derivative works</label>
+               <br>
+            </section>
+         </form>
+      </section>
+
+      <form class="License">
+         <label for="license">I accept the software license </label>
+         <input type="checkbox" id="license" name="license" value="license">
+      </form>
+
+      <section class="More-Details">
+         <form class="Rate-and-Color">
+            <label for="rate">Rate this photo:<br></label>
+            <input type="number" id="rate" name="rate" min="0" max="10" step="1">
+            <br>
+
+            <label for="color">Color collection:<br></label>
+            <input type="color" id="color" name="color">
+            <br>
+         </form>
+
+         <form class="Date-and-Time">
+            <label for="date">Date Taken:<br></label>
+            <input type="date" id="date">
+            <br>
+
+            <label for="time">Time Taken:<br></label>
+            <input type="time" id="time">
+            <br>
+         </form>
+      </section>
+
+      <section class="Finalize">
+         <form class="Submit-and-Clear">
+            <input type="button" value="Submit">
+            <input type="button" value="Clear Form">
+         </form>
+      </section>
+   </section>
+</main>  
+
+
+</body>
+</html>
