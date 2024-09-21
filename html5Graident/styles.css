@@ -1,0 +1,10 @@
+header {
+    height: 100px;
+    color: white;
+    background-image: repeating-linear-gradient(45deg, darkblue 0% 5%, black 5% 7.5%);
+    h2 {
+        display: flex;
+        align-content: center;
+        margin-left: 5%;
+    }
+}
