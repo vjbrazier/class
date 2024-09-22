@@ -15,29 +15,27 @@ header {
     }
 }
 
-.videos_broad {
+.video_grid {
     h1 {
         color: white;
-        margin-left: 25%;
-        margin-top: 10%;
         font-size: 30px;
         font-style: italic;
+        margin-top: 20px;
+        margin-right: 310px;
     }
     
     @media (max-width: 960px) {
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-items: center;
     }
-
+    
     @media (min-width: 961px) {
-        display:grid;
+        display: grid;
         grid-template-columns: 50% 50%;
-
-        .videos {
-            display: grid;
-            grid-template-columns: 100%;
-        }
+        justify-items: center;
+        align-items: center;
     }
-
+    
 }
