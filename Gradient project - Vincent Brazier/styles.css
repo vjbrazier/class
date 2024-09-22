@@ -1,0 +1,43 @@
+body {
+    background-image: linear-gradient(darkblue, white);
+    background-attachment: fixed;
+}
+
+header {
+    height: 100px;
+    color: white;
+    background-image: repeating-linear-gradient(45deg, darkblue 0% 5%, black 5% 7.5%);
+    
+    h2 {
+        margin-left: 25px;
+        font-style: italic;
+        font-size: 30px;
+    }
+}
+
+.videos_broad {
+    h1 {
+        color: white;
+        margin-left: 25%;
+        margin-top: 10%;
+        font-size: 30px;
+        font-style: italic;
+    }
+    
+    @media (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    @media (min-width: 961px) {
+        display:grid;
+        grid-template-columns: 50% 50%;
+
+        .videos {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+    }
+
+}
