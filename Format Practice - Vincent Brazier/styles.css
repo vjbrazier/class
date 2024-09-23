@@ -1,3 +1,4 @@
+/* For smaller screens */
 @media (max-width: 960px) {
     body {
         background-color: blue;
@@ -14,6 +15,7 @@
     }
 }
 
+/* For larger screens */
 @media (min-width: 961px) {
     body {
         background-color: tan;
@@ -29,73 +31,12 @@
     }
 } 
 
+/* For some reason the headers aren't large. This is my "fix" */
 h1 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
-.question-mark {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: white;
-    width: 4%;
-    text-align: center;
-    background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
-    border-radius: 50%;
-    margin: 10px 10px 10px 10px;
-}
-
-.main {
-    display: grid;
-    grid-template-columns: 25% 75%;;
-}
-
-.main aside {
-    background-color: lightgray;
-}
-
-.main aside h1, .main aside p {
-    margin-left: 5px;
-}
-
-#red-square {
-    margin-left: 5px;
-    text-align: center;
-    height: 200px;
-    width: 200px;
-    background-color: red;
-}
-
-.gray-square {
-            height: 500px;
-            width: 90%;
-            margin-left: 5px;
-            background-color: gray;
-}
-
-body article {
-    background-color: white;
-}
-
-body article h1, body article strong, body article p {
-    margin-left: 5px;
-}
-
-.gray-square {
-    margin-left: 5px;
-    background-color: gray;
-    height: 250px;
-    width: 90%;
-}
-
-body footer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 50px;
-}
-
-
+/* Adds a gap prior to the scrolling */
 .scroll {   
     width: 100%;
     height: 200px;
@@ -110,6 +51,9 @@ body footer {
     justify-content: center;
 }
 
+/* <BODY> Code */
+/*             */
+/* The navigation bar */
 nav {
     display: flex;
     background-color: black;
@@ -125,4 +69,103 @@ nav p {
     align-content: center;
     font-size: 25px;
     padding: 5px 5px;
+}
+
+/* Hovers at the bottom right of any screen */
+.question-mark {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    width: 4%;
+    text-align: center;
+    background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+    border-radius: 50%;
+    margin: 10px 10px 10px 10px;
+}
+
+/* Controls the layout being split into two parts */
+.main {
+    display: grid;
+    grid-template-columns: 25% 75%;;
+}
+
+/* These two set the colors, and make a small gap */
+.main aside {
+    background-color: lightgray;
+}
+
+.main aside h1, .main aside p, .main aside a {
+    margin-left: 5px;
+}
+
+/* The secret message */
+.secret {
+    display:flex;
+    text-decoration: underline;
+}
+
+.secret #hidden-text {
+    visibility: hidden;
+}
+
+.secret:hover #hidden-text {
+    text-decoration: none;
+    border: 2px solid black;
+    margin-left: 5px;
+    color: white;
+    background-color: black;
+    visibility: visible;
+}
+
+/* This is for the red square, it is just a transition */
+#red-square {
+    margin-left: 5px;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition: width 2s, height 2s;
+}
+
+#red-square:hover {
+    width: 400px;
+    height: 400px;
+    transition: width 2s, height 2s;
+}
+
+/*A generalized large gray square. Adds space for scrolling */
+.gray-square {
+    height: 500px;
+    width: 90%;
+    margin-left: 5px;
+    background-color: gray;
+}
+
+/* These two set colors, and make a small gap */
+body article {
+    background-color: white;
+}
+
+body article h1, body article strong, body article p {
+    margin-left: 5px;
+}
+
+/* The footer animation */
+@keyframes footer-square {
+    0%  {background-color:red;      left: 0px;   top: 0px;}
+    20% {background-color: orange;  left: 100px; top: 100px;}
+    40% {background-color: yellow;  left: 200px; top: 200px;}
+    60% {background-color: green;   left: 200px; top: 200px;}
+    80% {background-color: blue;    left: 100px; top: 100px;}
+    100% {background-color: purple; left: 0px;   top: 0px;}
+}
+
+#footer-square {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: footer-square;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
