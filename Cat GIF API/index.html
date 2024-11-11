@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random cat</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightgray;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 15px 10px 15px;
+            border-radius: 10px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Get a Random Cat GIF</h1>
+        <button id="get-gif">Get Cat GIF</button>
+        <br>
+        <img id="cat-gif" src="">
+    </div>
+
+    <script>
+        $('#get-gif').on('click', () => {
+            fetch('https://api.giphy.com/v1/gifs/random/?api_key=EZh0TkX55Seih54ZLEebErdYsI6YalwQ&rating=g&tag=%22cat%22')
+            .then((data) => {
+                return data.json();
+            })
+            .then((res) => {
+                console.log(res);
+
+                image = (res['data']['images']['original']['url'])
+            
+                $('#cat-gif').attr('src', image)
+            })
+            
+        })
+    </script>
+</body>
+</html>
