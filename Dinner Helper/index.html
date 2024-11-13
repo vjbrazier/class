@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <br>
     <h1>Welcome to dinner helper. We'll help you settle on what sounds good.</h1>
     <br>
 
@@ -26,7 +27,31 @@
     <input type="text" placeholder="Example: beef, corn, broccoli">
     <br> <br>
 
-    <button>Give me a meal!</button>
+    <button id="generate-meal">Give me a meal!</button>
+    <br>
+
+    <table id="meal-chosen">
+        <tr>
+            <th colspan="2" id="meal-name">Cheeseburger</th>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="https://placehold.co/200x200" id="meal-image"></td>
+        </tr>
+        <tr>
+            <td id="meal-instructions" colspan="2"></td>
+        </tr>
+        <div id="ingredients-measurements">
+            <tr>
+                <td>Ingredient 1</td>
+                <td>Measurement 1</td>
+            </tr>
+            <tr>
+                <td>Ingredient 2</td>
+                <td>Measurement 2</td>
+            </tr>
+        </div>
+        
+    </table>
 
     <script src="script.js"></script>
 </body>
