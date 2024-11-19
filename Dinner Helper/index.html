@@ -20,11 +20,11 @@
     <br>
 
     <h2>Do you have any allergies?</h2>
-    <input type="text" placeholder="Example: wheat, peanut, milk">
+    <input type="text" placeholder="Example: wheat, peanut, milk" id="allergens">
     <br> <br>
 
     <h2>Do you have anything that you just don't want to eat?</h2>
-    <input type="text" placeholder="Example: beef, corn, broccoli">
+    <input type="text" placeholder="Example: beef, corn, broccoli" id="dislikes">
     <br> <br>
 
     <button id="generate-meal">Give me a meal!</button>
@@ -39,18 +39,7 @@
         </tr>
         <tr>
             <td id="meal-instructions" colspan="2"></td>
-        </tr>
-        <div id="ingredients-measurements">
-            <tr>
-                <td>Ingredient 1</td>
-                <td>Measurement 1</td>
-            </tr>
-            <tr>
-                <td>Ingredient 2</td>
-                <td>Measurement 2</td>
-            </tr>
-        </div>
-        
+        </tr>        
     </table>
 
     <script src="script.js"></script>

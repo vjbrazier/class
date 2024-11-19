@@ -46,3 +46,13 @@ table, th, td {
 #meal-instructions {
     white-space: pre-wrap;
 }
+
+#meal-image {
+    width: 350px;
+    height: 350px;
+}
+
+#ingredients-measurements {
+    width: 100%;
+    table-layout: fixed;
+}
