@@ -1,8 +1,14 @@
 function check_meal(current_ingredients) {
-    allergic_ingredients = $("#allergens").val() + ",";
-    disliked_ingredients = $("#dislikes").val();
 
-    bad_ingredients = allergic_ingredients + disliked_ingredients;
+    if ($("#allergens").val() == '') {
+        bad_ingredients = $("#dislikes").val();
+    } else if ($("#dislikes").val() == '') {
+        bad_ingredients = $("#allergens").val();
+    } else {
+        allergic_ingredients = $("#allergens").val() + ",";
+        disliked_ingredients = $("#dislikes").val();
+    }
+
     bad_ingredients = bad_ingredients.split(',');
 
     for (let i = 0; i < current_ingredients.length; i++) {
